@@ -1,0 +1,120 @@
+.item-page {
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+
+  .item-img {
+    img {
+      width: 220px;
+      height: 125px;
+    }
+  }
+
+  .item-mes {
+    padding-left: 14px;
+
+    dt {
+      padding-bottom: 8px;
+
+      a {
+        font-weight: 500;
+        font-size: 16px;
+        color: #333;
+      }
+    }
+
+    dd {
+      .item-el-rate {
+        display: inline-block !important;
+      }
+
+      >span {
+        font-size: 14px;
+        vertical-align: middle;
+
+        &.star-com {
+          padding-left: 15px;
+        }
+
+        &.people {
+          color: #FF9900;
+          margin-left: 30px;
+        }
+      }
+
+      .address {
+        span {
+          color: #666;
+          font-size: 12px;
+
+          &.address-span {
+            margin-left: 15px;
+          }
+
+          &.map {
+            i {
+              color: orange;
+            }
+
+            span {
+              cursor: pointer;
+            }
+
+            margin-left: 20px;
+          }
+        }
+      }
+
+      .avgprice {
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px dotted #ccc;
+      }
+
+      .detail-list {
+        width: 100%;
+
+        li {
+          width: 100%;
+          cursor: pointer;
+          padding: 2px 12px;
+
+          &:hover {
+            background-color: #F8F8F8;
+            border-radius: 4px;
+          }
+
+          .item-title {
+            font-size: 14px;
+            color: #666;
+            height: 16px;
+            line-height: 16px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-bottom: 0px;
+
+            &:hover {
+              color: #FE8C00;
+            }
+          }
+
+          .item-price {
+            margin-top: -5px;
+
+            .current-price {
+              font-size: 15px;
+              color: #ff6600;
+              margin-right: 20px;
+            }
+
+            .over {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

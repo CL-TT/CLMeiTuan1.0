@@ -1,0 +1,162 @@
+$color: #ff6013;
+
+%flex {
+  display: flex;
+  align-items: center;
+}
+
+.my-nav {
+  height: 40px;
+
+  .nav-ul {
+    //利用了扩展继承技术
+    @extend %flex;
+    margin-left: 350px;
+
+    //ul下面的子元素  li元素,  不包括子孙li元素
+    >li {
+      margin-right: 25px;
+      height: 40px;
+      padding: 0 10px;
+      position: relative;
+
+      a {
+        height: 40px;
+        line-height: 40px;
+
+        &:hover {
+          color: $color;
+        }
+      }
+
+      >dl {
+        width: 100%;
+        position: absolute;
+        top: 95%;
+        left: 0%;
+        display: none;
+        background-color: #fff;
+        border-color: #E5E5E5;
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+
+        &.bd {
+          width: 100px;
+          left: -47%;
+        }
+
+        dd {
+          width: 100%;
+          text-align: center;
+
+          a {
+            &.hover {
+              color: $color;
+            }
+          }
+        }
+      }
+
+      &.site {
+        .contain {
+          width: 1190px;
+          position: absolute;
+          top: 95%;
+          left: -1122px;
+          padding-bottom: 30px;
+          box-sizing: border-box;
+          background-color: #fff;
+          border-color: #E5E5E5;
+          box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+          display: none;
+
+          >dl {
+            width: 300px;
+            float: left;
+
+            dt {
+              font-size: 20px;
+              text-align: center;
+              color: black;
+              padding: 20px 0;
+            }
+
+            .dd-wrap {
+              @extend %flex;
+              flex-wrap: wrap;
+
+              >dd {
+                width: 32%;
+                height: 28px;
+                text-align: center;
+
+                a {
+                  display: inline-block;
+                  width: 100%;
+                  height: 100%;
+                  line-height: 28px;
+                }
+              }
+            }
+
+            &.hotel {
+              margin-left: 30px;
+            }
+
+            &.eat {
+              width: 180px;
+              margin-left: 30px;
+
+              dd {
+                width: 48%;
+              }
+            }
+
+            &.movies {
+              width: 200px;
+
+              dd {
+                width: 100%;
+              }
+            }
+
+            &.app {
+              width: 380px;
+
+              .dd-wrap {
+                justify-content: space-between;
+
+                dd {
+                  width: 60px;
+                  height: 60px;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .contain {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .list:hover {
+      z-index: 20;
+      background-color: #fff;
+      border-color: #E5E5E5;
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+
+      .dl {
+        display: block;
+        // z-index: 5;
+      }
+    }
+  }
+}

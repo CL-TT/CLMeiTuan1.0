@@ -1,0 +1,34 @@
+$color: #ff6013;
+
+.geo-page {
+  height: 40px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+
+  //地理位置区域
+  .position {
+    margin-left: 120px;
+
+    .change {
+      margin-left: 3px;
+
+      border: 1px solid #ccc;
+      padding: 1px;
+    }
+
+    .city {
+      margin-right: 5px;
+    }
+  }
+
+  //用户登录区域
+  .user {
+    margin-left: 50px;
+
+    .login {
+      color: $color;
+      margin-right: 8px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+a,
+a:hover,
+a:focus {
+  color: #ff6013;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity .5s
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #F8F8F8;
+}
+
+html,
+body,
+div,
+a,
+ul,
+li,
+dl,
+dt,
+dd {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: #999;
+  font-size: 12px;
+  box-sizing: border-box;
+}

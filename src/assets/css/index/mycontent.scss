@@ -1,0 +1,135 @@
+.content-page {
+  width: 1228px;
+  margin: 20px auto 0;
+
+  //导航部分
+  .content-page-dl {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+
+    dt {
+      font-size: 18px;
+      font-weight: 500;
+      margin-right: 30px;
+    }
+
+    dd {
+      font-size: 16px;
+      padding: 0px 10px;
+      position: relative;
+      cursor: pointer;
+
+      &.active::after {
+        position: absolute;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 7px solid #fff;
+        content: " ";
+        display: block;
+        width: 2px;
+        height: 0;
+        top: 23px;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  //主体部分
+  .content-page-ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 11px 10px 10px;
+    background-color: #fff;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+
+    >li {
+      width: 33.3%;
+      height: 314px;
+      padding: 5px 10px;
+      float: left;
+      background: #fff;
+      transition: background-color .5s;
+      height: 314px;
+
+      .el-card {
+        width: 100%;
+        height: 100%;
+        border: none;
+        overflow: visible;
+        background-color: transparent;
+
+        img {
+          max-width: 100%;
+          width: 100%;
+          height: 208px;
+          margin-bottom: 11px;
+          cursor: pointer;
+          border-radius: 8px;
+        }
+
+        .el-card__body {
+          .cbody {
+            .title {
+              font-size: 16px;
+              color: #222;
+              height: 22px;
+              line-height: 22px;
+              margin-bottom: 8px;
+              font-weight: 500;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              cursor: pointer;
+              padding: 0 8px;
+            }
+
+            .sub-title {
+              font-size: 12px;
+              color: #999;
+              line-height: 18px;
+              height: 18px;
+              margin-bottom: 7px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              padding: 0 8px;
+            }
+
+            .price-info {
+              color: #BE9E4D;
+
+              display: flex;
+              justify-content: space-between;
+              padding: 0 8px;
+              align-items: center;
+
+              .current-price-wrapper {
+                .price-symbol {
+                  font-size: 18px;
+                }
+              }
+
+              .bottom-right-info {
+                color: #ccc;
+              }
+            }
+          }
+        }
+      }
+
+      &:hover {
+        background: #F4F4F4;
+        transition: background-color .5s;
+        border-radius: 4px;
+      }
+    }
+  }
+}

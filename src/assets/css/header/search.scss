@@ -1,0 +1,97 @@
+%flex {
+  display: flex;
+  align-items: center;
+}
+
+$color: #ff6013;
+
+.search-page {
+  width: 100%;
+
+  .search-row {
+    width: 1242px;
+    margin: 20px auto 0;
+
+    //logo区域
+    .logo {
+      margin-left: 10px;
+      height: 50px;
+
+      img {
+        width: 146px;
+        height: 46px;
+      }
+    }
+
+    //搜索框区域
+    .search-col {
+      position: relative;
+
+      .search-form {
+        margin-left: 190px;
+        @extend %flex;
+
+        .search-input {
+          width: 360px;
+        }
+
+        .search-btn {
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+          width: 61px;
+          margin-left: 0px;
+          background-color: $color;
+          border-style: none;
+        }
+      }
+
+      .idea {
+        margin: 5px 0 0 -104px;
+        text-align: center;
+
+        a {
+          display: inline-block;
+          padding: 0 8px;
+        }
+      }
+
+      .hot-search,
+      .search-list {
+        position: absolute;
+        z-index: 200;
+        top: 40px;
+        left: 191px;
+        width: 360px;
+        background-color: #fff;
+        border-color: #E5E5E5;
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+
+        dt {
+          padding: 8px 0 0 10px;
+        }
+      }
+
+      //热门搜索
+      .hot-search {
+        >.dd-wrap {
+          @extend %flex;
+
+          dd {
+            padding: 8px;
+
+            a {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+      .search-list {
+        dd {
+          padding: 5px 15px;
+        }
+      }
+    }
+  }
+}

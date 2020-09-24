@@ -1,0 +1,19 @@
+.province-page {
+  .span {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  .search-div {
+    display: inline-block;
+    margin-left: 50px;
+
+    .privince-select {
+      outline: none;
+      padding-left: 30px;
+    }
+  }
+}

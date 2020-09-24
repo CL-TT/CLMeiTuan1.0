@@ -1,0 +1,45 @@
+.categroy-page {
+  width: 100%;
+  margin: 20px auto;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  color: #333;
+  font-size: 14px;
+  padding: 20px 0;
+
+  dl {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+
+    dt {
+      width: 70px;
+      padding: 2px 18px;
+      color: #333;
+      font-size: 14px;
+      text-align: center;
+
+      &.all {
+        border-radius: 100px;
+        background: linear-gradient(to bottom right, #FFD000, #FFBD00);
+        color: #222222;
+        margin-left: 40px;
+
+        a {
+          color: #333;
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+    }
+
+    .categroy-list {
+      display: flex;
+      align-items: center;
+      margin-left: 30px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
